@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pinchRecognizer.addTarget(self, action: "handlePinch:")
+        pinchRecognizer.addTarget(self, action: #selector(ViewController.handlePinch(_:)))
         tableView.addGestureRecognizer(pinchRecognizer)
 
         tableView.dataSource = self

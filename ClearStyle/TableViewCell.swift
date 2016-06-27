@@ -95,7 +95,7 @@ class TableViewCell: UITableViewCell, UITextFieldDelegate {
         layer.insertSublayer(itemCompleteLayer, atIndex: 0)
         
         // add a pan recognizer
-        let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        let recognizer = UIPanGestureRecognizer(target: self, action: #selector(TableViewCell.handlePan(_:)))
         recognizer.delegate = self
         addGestureRecognizer(recognizer)
     }
